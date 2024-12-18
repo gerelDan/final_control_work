@@ -1,0 +1,8 @@
+horse
+camel
+donkey
+camel
+horse
+horse
+camel
+donkey

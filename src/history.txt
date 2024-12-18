@@ -1,0 +1,29 @@
+ 1151  cat > homeAnimal.txt
+ 1152  cat > packAnimal.txt
+ 1153  cat homeAnimal.txt packAnimal.txt > humanFriends.txt
+ 1154  cat humanFriends.txt 
+ 1155  mkdir animals
+ 1182  pwd
+ 1183  mv humanFriends.txt /home/daniil/IdeaProjects/untitled/src/animals
+ 1184  cat > history.txt
+ 1185 sudo su
+ 89 wget https://dev.mysql.com/get/mysql-apt-config_0.8.33-1_all.deb
+ 90 dpkg -i mysql-apt-config_0.8.33-1_all.deb
+ 91 cd /etc/apt
+ 92 cd sources.d
+ 93 cd sources.list
+ 94 ls -al
+ 95 cd sources.list.d
+ 96 ll
+ 97 cat mysql.list
+ 98 apt update
+ 99 exit
+ 1186 sudo apt install mysql-community-server
+ 1187 sudo apt purge mysql-community-server
+ 1188 sudo dpkg --purge mysql-apt-config
+ 1189 sudo apt autoremove
+ 1190 sudo su
+ 100 cd /etc/apt
+ 101 cd sources.list.d
+ 102 ll
+ 103 apt update
