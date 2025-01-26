@@ -15,8 +15,12 @@ public class Service implements Serializable {
     }
 
     public void addPet(Pet pet){
-        pet.setId(this.counter.add());
-        this.registry.add(pet);
+        try {
+            pet.setId(this.counter.add());
+            this.registry.add(pet);
+        } catch (IOException e){
+            System.out.println(e.getMessage());
+        }
     }
     public List<Pet> getAllPets(){
         return this.registry;

@@ -4,15 +4,22 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Pet extends Animal implements Serializable {
+public class Pet extends Animal implements Serializable{
     protected Integer id;
     protected String commands;
-    public Pet(String name, LocalDate db){
-        this.name = name;
-        this.db = db;
-    };
+//    public Pet(String name, LocalDate db){
+//        this.name = name;
+//        this.db = db;
+//    }
     public Integer getId(){
         return this.id;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setBirthday(LocalDate date) {
+        this.db = date;
     }
 
     public String getName(){
@@ -44,7 +51,7 @@ public class Pet extends Animal implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, commands);
+        return Objects.hash(id, name, commands);
     }
 
     @Override
@@ -59,4 +66,5 @@ public class Pet extends Animal implements Serializable {
     public Integer getAge(){
         return getDb().until(LocalDate.now()).getYears();
     }
+
 }
