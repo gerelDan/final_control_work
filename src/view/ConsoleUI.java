@@ -121,7 +121,7 @@ public class ConsoleUI implements PetsView{
         String answer = getCommandInput();
         if (checkTextForInt(answer)){
             int intAnswer = Integer.parseInt(answer);
-            if (intAnswer <= 3){
+            if (intAnswer <= PetType.values().length && intAnswer > 0){
                 for (Pet pet: presenter.getOnlyPetType(intAnswer)) {
                     System.out.println(pet);
                 }

@@ -16,6 +16,9 @@ public class Menu {
         commandList.add(new SavePetsRepository(consoleUi));
         commandList.add(new LoadPetsRepository(consoleUi));
         commandList.add(new AddCommand(consoleUi));
+        commandList.add(new GetOnlyPetType(consoleUi));
+        commandList.add(new GetYounger(consoleUi));
+        commandList.add(new GetOlder(consoleUi));
         commandList.add(new Exit(consoleUi));
     }
     public int getSize(){
