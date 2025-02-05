@@ -7,7 +7,7 @@ import java.time.LocalTime;
 import java.util.List;
 
 public interface PetsView {
-        void showPets(List<Pet> notes);
+        void showPets();
         void showMessage(String message);
         LocalDate getDateOfBirthdayInput();
         String getNameInput();

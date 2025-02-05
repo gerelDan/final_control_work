@@ -6,7 +6,8 @@ import java.util.Objects;
 
 public class Pet extends Animal implements Serializable{
     protected Integer id;
-    protected String commands;
+    protected String commands = "";
+    protected PetType petType;
 //    public Pet(String name, LocalDate db){
 //        this.name = name;
 //        this.db = db;
@@ -59,12 +60,16 @@ public class Pet extends Animal implements Serializable{
         return "Pet{" +
                 ", id=" + id +
                 ", name='" + name + '\'' +
-                "db=" + db +
+                ", db=" + db +
                 ", commands='" + commands + '\'' +
                 '}';
     }
     public Integer getAge(){
         return getDb().until(LocalDate.now()).getYears();
+    }
+
+    public PetType getPetType(){
+        return petType;
     }
 
 }

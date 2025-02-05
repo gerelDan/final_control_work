@@ -1,21 +1,19 @@
 package model;
 
-public enum PetType {
+import java.io.Serializable;
+
+public enum PetType implements Serializable {
 
     Cat,
     Dog,
     Hamster;
 
     public static PetType getType (int typeId){
-        switch (typeId){
-            case 1:
-                return PetType.Cat;
-            case 2:
-                return PetType.Dog;
-            case 3:
-                return PetType.Hamster;
-            default:
-                return null;
-        }
+        return switch (typeId) {
+            case 1 -> PetType.Cat;
+            case 2 -> PetType.Dog;
+            case 3 -> PetType.Hamster;
+            default -> null;
+        };
     }
 }

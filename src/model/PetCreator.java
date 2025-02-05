@@ -1,8 +1,9 @@
 package model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class PetCreator {
+public class PetCreator implements Serializable {
 
     protected Pet createNewPet (PetType type) {
 
