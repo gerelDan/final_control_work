@@ -57,7 +57,7 @@ public class Pet extends Animal implements Serializable{
 
     @Override
     public String toString() {
-        return "Pet{" +
+        return this.getPetType() +
                 ", id=" + id +
                 ", name='" + name + '\'' +
                 ", db=" + db +
